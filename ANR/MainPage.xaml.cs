@@ -3,7 +3,7 @@ namespace ANR;
 
 public partial class MainPage : ContentPage
 {
-	public ObservableCollection<Item> ItemList { get; } = [];
+	public ObservableCollection<Item> ItemList { get; } = new();
 
 	public MainPage()
 	{
@@ -16,7 +16,7 @@ public partial class MainPage : ContentPage
 		base.OnAppearing();
 
 		ItemList.Clear();
-		for(int i = 0; i < 1000; i++)
+		for(int i = 0; i < 100000; i++)
 		{
 			ItemList.Add(new Item());
 		}
@@ -29,7 +29,7 @@ public class Item
 	public bool IsEnable { get; set; }
 	public string Title { get; set; } = "Title";
 
-	public ObservableCollection<SubItem> SubitemList { get; } = [new SubItem(), new SubItem(), new SubItem(), new SubItem(), new SubItem(),];
+	public ObservableCollection<SubItem> SubitemList { get; } = new ObservableCollection<SubItem> { new(), new(), new(), new(), new() };
 }
 
 public class SubItem
