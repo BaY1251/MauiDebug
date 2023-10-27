@@ -16,7 +16,7 @@ public partial class MainPage : ContentPage
 		base.OnAppearing();
 
 		ItemList.Clear();
-		for(int i = 0; i < 100000; i++)
+		for(int i = 0; i < 1000; i++)
 		{
 			ItemList.Add(new Item());
 		}

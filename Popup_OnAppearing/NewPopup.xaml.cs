@@ -11,12 +11,13 @@ public partial class NewPopup : Popup
 	public async static Task Show()
 	{
 		var popup = new NewPopup();
-		popup.Opened += (s, e) => Task.Delay(500).ContinueWith(s =>
+		popup.Opened += (s, e) => Task.Delay(800).ContinueWith(s =>
 		{
-			Thread.Sleep(1000);
+			//action?.Invoke();
+			Thread.Sleep(500);
 			MainThread.BeginInvokeOnMainThread(() => popup.Close());
 		});
 
-		await Shell.Current.ShowPopupAsync(popup);
+		await Shell.Current.CurrentPage.ShowPopupAsync(popup);
 	}
 }
