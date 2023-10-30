@@ -10,6 +10,6 @@ public partial class SecPage : ContentPage
 	protected override async void OnAppearing()
 	{
 		base.OnAppearing();
-		await NewPopup.Show();
+		await ProgressPage.Show();
 	}
 }

@@ -3,7 +3,7 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 x:Class="Toolkit.MainPage">
 	<Grid>
-		<Label Text="Hello, World!"
+		<Label x:Name="T" Text="Hello, World!"
 			   FontSize="32"
 			   VerticalTextAlignment="Start"
 			   HorizontalTextAlignment="Center" />
