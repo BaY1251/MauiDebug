@@ -11,10 +11,8 @@ public partial class MainPage : ContentPage
 		BindingContext = this;
 	}
 
-	protected override void OnAppearing()
+	private void ToolbarItem_Clicked(object sender, EventArgs e)
 	{
-		base.OnAppearing();
-
 		ItemList.Clear();
 		for(int i = 0; i < 1000; i++)
 		{
@@ -25,7 +23,8 @@ public partial class MainPage : ContentPage
 
 public class Item
 {
-	public string Name { get; set; } = "Item";
+	static int Count = 0;
+	public string Name { get; set; } = $"{Count++}";
 	public bool IsEnable { get; set; }
 	public string Title { get; set; } = "Title";
 
