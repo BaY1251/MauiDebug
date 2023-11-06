@@ -25,7 +25,7 @@ public class Model : INotifyPropertyChanged
 	{
 		var tick = Environment.TickCount;
 		ItemList.Clear();
-		for(int i = 0; i < 1000; i++)
+		for(int i = 0; i < 10000; i++)
 		{
 			ItemList.Add(new Item());
 		}
