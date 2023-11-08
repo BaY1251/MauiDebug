@@ -3,7 +3,7 @@ namespace ANR;
 
 public partial class MainPage : ContentPage
 {
-	public ObservableCollection<Item> ItemList { get; } = new();
+	public ObservableCollection<Item> ItemList { get; set; }
 
 	public MainPage()
 	{
@@ -13,11 +13,13 @@ public partial class MainPage : ContentPage
 
 	private void ToolbarItem_Clicked(object sender, EventArgs e)
 	{
-		ItemList.Clear();
+		var list = new List<Item>();
 		for(int i = 0; i < 1000; i++)
 		{
-			ItemList.Add(new Item());
+			list.Add(new Item());
 		}
+		ItemList = new(list);
+		OnPropertyChanged(nameof(ItemList));
 	}
 }
 

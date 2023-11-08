@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -19,18 +20,21 @@ namespace Data
 		}
 
 		public int Time { get; set; }
-		public ObservableCollection<Item> ItemList { get; } = new ObservableCollection<Item>();
+		public ObservableCollection<Item> ItemList { get; set; } = new ObservableCollection<Item>();
 
 		public Command RefreshCommand { get; }
 
 		public void Refresh()
 		{
 			var tick = Environment.TickCount;
-			ItemList.Clear();
-			for(int i = 0; i < 10000; i++)
+			var list = new List<Item>();
+			for(int i = 0; i < 100000; i++)
 			{
-				ItemList.Add(new Item());
+				list.Add(new Item());
 			}
+
+			ItemList = new ObservableCollection<Item>(list);
+			OnPropertyChanged(nameof(ItemList));
 
 			Time = Environment.TickCount - tick;
 			OnPropertyChanged(nameof(Time));
