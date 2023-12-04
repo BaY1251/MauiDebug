@@ -25,7 +25,7 @@ public partial class MainPage : ContentPage
 		}
 		else
 		{
-			await Toast.Make($"The file was not saved successfully with error: {fileSaverResult.Exception.Message}").Show(cancellationToken);
+			await Shell.Current?.DisplayAlert("error", fileSaverResult.Exception.Message, "OK");
 		}
 	}
 }
