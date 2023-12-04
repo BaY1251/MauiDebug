@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Maui.Views;
+﻿using System.Text;
+using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Storage;
 namespace Toolkit;
 
 public partial class MainPage : ContentPage
@@ -10,7 +12,21 @@ public partial class MainPage : ContentPage
 
 	private async void OnCounterClicked(object sender, EventArgs e)
 	{
-		await Application.Current.MainPage.ShowPopupAsync(new NewPopup());
+		await SaveFile(CancellationToken.None);
+	}
+
+	async Task SaveFile(CancellationToken cancellationToken)
+	{
+		using var stream = new MemoryStream(Encoding.Default.GetBytes("Hello from the Community Toolkit!"));
+		var fileSaverResult = await FileSaver.Default.SaveAsync("test.txt", stream, cancellationToken);
+		if(fileSaverResult.IsSuccessful)
+		{
+			await Toast.Make($"The file was saved successfully to location: {fileSaverResult.FilePath}").Show(cancellationToken);
+		}
+		else
+		{
+			await Toast.Make($"The file was not saved successfully with error: {fileSaverResult.Exception.Message}").Show(cancellationToken);
+		}
 	}
 }
 

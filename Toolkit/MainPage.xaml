@@ -9,7 +9,7 @@
 			   VerticalTextAlignment="Center"
 			   HorizontalTextAlignment="Center" />
 
-		<Button Text="Click me"
+		<Button Text="FileSaver"
 				Clicked="OnCounterClicked"
 				VerticalOptions="Start"
 				HorizontalOptions="Center" />
