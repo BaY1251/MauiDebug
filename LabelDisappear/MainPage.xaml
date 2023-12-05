@@ -2,14 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 x:Class="LabelDisappear.MainPage">
-	<!--<ContentPage.Resources>
+	<ContentPage.Resources>
 		<Style TargetType="Label">
 			<Setter Property="TextColor"
 					Value="Red" />
 			<Setter Property="HorizontalTextAlignment"
 					Value="Center" />
 		</Style>
-	</ContentPage.Resources>-->
+	</ContentPage.Resources>
 
 	<ScrollView>
 		<VerticalStackLayout Padding="30,0"
