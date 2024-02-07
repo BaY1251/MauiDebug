@@ -3,7 +3,7 @@ namespace ANR;
 
 public partial class MainPage : ContentPage
 {
-	private static int Tick = 0;
+	private static int Tick = Environment.TickCount;
 	private static int TickCount = 0;
 	public ObservableCollection<Item> ItemList { get; set; } = [];
 
@@ -15,6 +15,7 @@ public partial class MainPage : ContentPage
 
 	private void ToolbarItem_Clicked(object sender, EventArgs e)
 	{
+		Tick = Environment.TickCount;
 		var list = new List<Item>();
 		for(int i = 0; i < 100; i++)
 		{
@@ -35,7 +36,7 @@ public partial class MainPage : ContentPage
 	{
 		Tick = Environment.TickCount;
 		ItemList.Add(new Item() { TickCount = TickCount, Operate = "Add" });
-		Collection.ScrollTo(ItemList.Count - 1);
+		Collection.ScrollTo(ItemList.Count);
 	}
 
 	private void Collection_ChildAdded(object sender, ElementEventArgs e)
