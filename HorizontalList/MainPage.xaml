@@ -7,17 +7,15 @@
 
 	<Grid RowSpacing="2"
 		  ColumnSpacing="0"
-		  RowDefinitions="5*,*"
-		  ColumnDefinitions="7*,100,*">
-		<Border Grid.Row="1"
-				Grid.ColumnSpan="3"
+		  RowDefinitions="5*,*">
+		<!--<Border
 				Margin="0"
 				Padding="5"
 				Stroke="DarkSlateGray"
 				StrokeThickness="2"
-				BackgroundColor="Transparent">
-			<Grid ColumnDefinitions="*,240">
-				<CollectionView ItemsLayout="HorizontalList"
+				BackgroundColor="Transparent">-->
+			<!--<Grid ColumnDefinitions="*,240">-->
+				<CollectionView Grid.Row="1" ItemsLayout="HorizontalList"
 								ItemsSource="{Binding ItemList}">
 					<CollectionView.ItemTemplate>
 						<DataTemplate x:DataType="local:Item">
@@ -26,7 +24,7 @@
 						</DataTemplate>
 					</CollectionView.ItemTemplate>
 				</CollectionView>
-			</Grid>
-		</Border>
+			<!--</Grid>-->
+		<!--</Border>-->
 	</Grid>
 </ContentPage>
