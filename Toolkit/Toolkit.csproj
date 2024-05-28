@@ -24,7 +24,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 
-		<RuntimeIdentifiers Condition="$(TargetFramework.Contains('-android'))">android-arm</RuntimeIdentifiers>
+		<RuntimeIdentifiers Condition="$(TargetFramework.Contains('-android'))">android-arm;android-arm64</RuntimeIdentifiers>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -46,9 +46,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.0" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<!--<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />-->
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.7" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="E:\Storage\Maui\CommunityToolkit.Maui\src\CommunityToolkit.Maui\CommunityToolkit.Maui.csproj" />
 	</ItemGroup>
 
 </Project>

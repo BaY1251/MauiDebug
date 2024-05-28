@@ -53,9 +53,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.7" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.60-ci.net8.24272.1" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.60-ci.net8.24272.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Maui.Core" Version="8.0.41" />
 	</ItemGroup>
 
 </Project>

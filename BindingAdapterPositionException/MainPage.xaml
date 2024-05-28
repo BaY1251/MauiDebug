@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:local="clr-namespace:BindingAdapterPositionException"
+			 x:Class="BindingAdapterPositionException.MainPage"
+			 x:DataType="local:MainPage">
+
+	<CollectionView SelectionMode="Single"
+					ItemsSource="{Binding ItemList}"
+					SelectionChanged="CollectionView_SelectionChanged" />
+
+</ContentPage>
