@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Leak-dotnet9.0.csproj" />
+  <Project Path="Leak-dotnet10.0.csproj" />
+</Solution>

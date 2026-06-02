@@ -1,14 +1,15 @@
 ﻿{
-  "VersionNow": {
-    "_Major": 1,
-    "_Minor": 0,
-    "_Build": 0,
-    "_Revision": 2
-  },
+  "VersionNow": "1.0.0.3",
   "VersionBase": null,
   "Customer": null,
   "OrderNumber": null,
-  "VersionList": [],
-  "KeyWords": [],
-  "ClipboardCmd": {}
+  "VersionList": [
+    {
+      "Label": "Fast.Android",
+      "Title": "Fast.Android",
+      "Time": "2026-06-02 08:38:48",
+      "Value": "1.0.0.3"
+    }
+  ],
+  "KeyWords": []
 }
